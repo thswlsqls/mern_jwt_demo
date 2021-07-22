@@ -1,0 +1,55 @@
+
+GET http://localhost:5000/api/hello
+
+###
+
+GET http://localhost:5000/dotenv
+
+###
+
+POST http://localhost:5000/api/users/signup
+Content-Type: application/json
+
+{
+    "name":"test",
+    "email":"test@naver.com",
+    "password":123456789012,
+    "role":0
+}
+
+###
+POST http://localhost:5000/api/users/signin
+Content-Type: application/json
+
+{
+    "email":"test@naver.com",
+    "password":"123456789012"
+}
+
+
+###
+POST http://localhost:5000/api/users/generateToken
+Content-Type: application/json
+
+{
+    "_id":"uuid",
+    "name":"test",
+    "email":"test@naver.com",
+    "role":0
+}
+
+###
+
+GET http://localhost:5000/api/posts/getPosts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vbG9jYWxob3N0Ijp0cnVlLCJ1c2VyTmFtZSI6InRlc3QiLCJ1c2VyRW1haWwiOiJ0ZXN0QG5hdmVyLmNvbSIsInVzZXJSb2xlIjowLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjI2NzU3ODgxLCJleHAiOjE2MjY3NTg3ODF9.z9jLAU_qZZJsNNoOdSefOJDel7MFLo1NpAH5QkuKwmw
+
+
+###
+GET http://localhost:5000/api/users/logout
+
+###
+GET http://localhost:5000/api/users/authToken
+
+
+
+
